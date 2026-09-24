@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\ДО занятия 2026-2027\МДК.02.01 Программисты 1 курс\Разработки\№1. Консоль линейная бансковская задача\ConsoleBank\bin\Debug\ConsoleBank.exe.config
+C:\Users\user\Desktop\ДО занятия 2026-2027\МДК.02.01 Программисты 1 курс\Разработки\№1. Консоль линейная бансковская задача\ConsoleBank\bin\Debug\ConsoleBank.exe
+C:\Users\user\Desktop\ДО занятия 2026-2027\МДК.02.01 Программисты 1 курс\Разработки\№1. Консоль линейная бансковская задача\ConsoleBank\bin\Debug\ConsoleBank.pdb
+C:\Users\user\Desktop\ДО занятия 2026-2027\МДК.02.01 Программисты 1 курс\Разработки\№1. Консоль линейная бансковская задача\ConsoleBank\obj\Debug\ConsoleBank.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\ДО занятия 2026-2027\МДК.02.01 Программисты 1 курс\Разработки\№1. Консоль линейная бансковская задача\ConsoleBank\obj\Debug\ConsoleBank.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\ДО занятия 2026-2027\МДК.02.01 Программисты 1 курс\Разработки\№1. Консоль линейная бансковская задача\ConsoleBank\obj\Debug\ConsoleBank.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ДО занятия 2026-2027\МДК.02.01 Программисты 1 курс\Разработки\№1. Консоль линейная бансковская задача\ConsoleBank\obj\Debug\ConsoleBank.exe
+C:\Users\user\Desktop\ДО занятия 2026-2027\МДК.02.01 Программисты 1 курс\Разработки\№1. Консоль линейная бансковская задача\ConsoleBank\obj\Debug\ConsoleBank.pdb
