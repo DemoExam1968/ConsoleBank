@@ -1,43 +1,49 @@
-﻿using System;
-using System.Globalization;
+﻿/*
+Банковская задача
+Входные
+Выходные
+ */
+
+using System;
 
 namespace ConsoleBank
 {
     internal class Program
     {
-        static Random rand = new Random();
+        static Random Rand = new Random();  //Создать объект ДСЧ
 
+        /// <summary>
+        /// Точка входа в программу
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
-            double Summa, PercentBank, BonusInDay, BonusInPeriod;
-            int Period;
-            string Temp;
+            //Блок объявления локальных велчин
+            double summa, percentBank, bonusInDay, bonusInPeriod;
+            int period;
+            string temp;
 
-            //NumberFormatInfo customFormat = new NumberFormatInfo();
-            //customFormat.CurrencySymbol = "В рублях "; // Меняем обозначение
-            //customFormat.CurrencySymbol = "₽"; // Меняем обозначение
-            //customFormat.NumberGroupSeparator = " "; // Пробел как разделитель групп
-            //customFormat.NumberDecimalSeparator = ":";
-
+            //Блок ввода даннных
             Console.Write("Введите сумму вклада ->");
-            Temp = Console.ReadLine();
-            Summa = Convert.ToDouble(Temp);
-
+            temp = Console.ReadLine();
+            summa = Convert.ToDouble(temp);
             Console.Write("Введите срок вклада ->");
-            Temp = Console.ReadLine();
-            Period = Convert.ToInt32(Temp);
+            temp = Console.ReadLine();
+            period = Convert.ToInt32(temp);
 
-            PercentBank = 5.25 + rand.NextDouble() * 11.61;
-            Console.WriteLine("Ваш назначенный банковский % = {0:N2}", PercentBank);
+            //Блок формирования сл. числа
+            percentBank = 5.25 + Rand.NextDouble() * 11.61;
+            Console.WriteLine("Ваш назначенный банковский % = {0:N2}", percentBank);
 
-            BonusInDay = PercentBank / (100 * 365) * Summa;
-            Console.WriteLine("Ваш ежедневный доход = " + BonusInDay.ToString("N2") + " в рублях");
-            //Console.WriteLine("Ваш ежедневный доход = " + BonusInDay.ToString("C2", customFormat));
-            BonusInPeriod = BonusInDay * Period;
-            Console.WriteLine($"Ваш доход за период = {BonusInPeriod:N2} в рублях");
-
-            Summa += BonusInPeriod;
-            Console.WriteLine($"Ваша сумма на счету в конце периода вклада = {Summa:N2} в рублях");
+            //Расчетный блок
+            bonusInDay = percentBank / (100 * 365) * summa;
+            Console.WriteLine("Ваш ежедневный доход = " + bonusInDay.ToString("N2") + " в рублях");
+            bonusInPeriod = bonusInDay * period;
+            Console.WriteLine($"Ваш доход за период = {bonusInPeriod:N2} в рублях");
+            summa += bonusInPeriod;
+            
+            //Результат
+            Console.WriteLine($"Ваша сумма на счету в конце периода вклада = {summa:N2} в рублях");
 
             Console.ReadKey();
         }
