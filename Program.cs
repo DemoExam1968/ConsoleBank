@@ -10,7 +10,9 @@ namespace ConsoleBank
 {
     internal class Program
     {
-        static Random Rand = new Random();  //Создать объект ДСЧ
+        const double BANKTHREEMONTH = 11.50;    //3 месяца
+        const double BANKSIXMONTH = 11.75;    //6 месяцев
+        const double BANKYEAR = 12.50;    //год
 
         /// <summary>
         /// Точка входа в программу
@@ -33,14 +35,35 @@ namespace ConsoleBank
             Console.Write("Введите сумму вклада ->");
             temp = Console.ReadLine();
             summa = Convert.ToDouble(temp);
-
-            Console.CursorLeft = 10;
+            //Валидация ввода срока
+            rep:  Console.CursorLeft = 10;
             Console.Write("Введите срок вклада ->");
             temp = Console.ReadLine();
             period = Convert.ToInt32(temp);
+            if (period != 91 && period!=181 && period != 365)
+            {
+                Console.WriteLine("Вы ошиблись со сроком. Повторите еще раз");
+                goto rep;
+            }
 
-            //Блок формирования сл. числа
-            percentBank = 5.25 + Rand.NextDouble() * 11.61;
+            //Выбор банковского % в засимости от срока
+            if (period == 91)
+            {
+                percentBank = BANKTHREEMONTH;
+            }
+            else
+            {
+                if (period == 181)
+                {
+                    percentBank = BANKSIXMONTH;
+                }
+                else
+                {
+                    percentBank = BANKYEAR;
+                }
+
+            }
+
             Console.CursorLeft = 10;
             Console.WriteLine("Ваш назначенный банковский % = {0:N2}", percentBank);
 
