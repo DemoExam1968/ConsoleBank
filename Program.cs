@@ -47,21 +47,12 @@ namespace ConsoleBank
             }
 
             //Выбор банковского % в засимости от срока
-            if (period == 91)
+            percentBank = 0;
+            switch (period)
             {
-                percentBank = BANKTHREEMONTH;
-            }
-            else
-            {
-                if (period == 181)
-                {
-                    percentBank = BANKSIXMONTH;
-                }
-                else
-                {
-                    percentBank = BANKYEAR;
-                }
-
+                case 91:percentBank = BANKTHREEMONTH; break;
+                case 181:percentBank = BANKSIXMONTH; break;
+                case 365:percentBank = BANKYEAR; break;
             }
 
             Console.CursorLeft = 10;
