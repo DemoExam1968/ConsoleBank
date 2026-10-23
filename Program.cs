@@ -35,16 +35,18 @@ namespace ConsoleBank
             Console.Write("Введите сумму вклада ->");
             temp = Console.ReadLine();
             summa = Convert.ToDouble(temp);
+
             //Валидация ввода срока
-            rep:  
-            Console.Write("Введите срок вклада ->");
-            temp = Console.ReadLine();
-            period = Convert.ToInt32(temp);
-            if (period != 91 && period!=181 && period != 365)
+            do
             {
-                Console.WriteLine("Вы ошиблись со сроком. Повторите еще раз");
-                goto rep;
-            }
+                Console.Write("Введите срок вклада ->");
+                temp = Console.ReadLine();
+                period = Convert.ToInt32(temp);
+                if (period != 91 && period != 181 && period != 365)
+                {
+                    Console.WriteLine("Вы ошиблись со сроком. Повторите еще раз");
+                }
+            } while (period != 91 && period != 181 && period != 365);
 
             //Выбор банковского % в засимости от срока
             percentBank = 0;
